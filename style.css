@@ -10,7 +10,6 @@ body {
   background: linear-gradient(#615dad, #ffc8da);
   min-height: 100vh;
   margin: 0;
-
 }
 
 header {
@@ -55,7 +54,15 @@ p {
   background-color: #1fcca4;
 }
 
+.pravidla:hover {
+  background-color: #1cbb96;
+}
+
 .start {
   margin-top: 1px;
   background-color: #0197f6;
+}
+
+.start:hover {
+  background-color: #0090e9;
 }
