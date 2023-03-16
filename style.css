@@ -10,6 +10,7 @@ body {
   background: linear-gradient(#615dad, #ffc8da);
   min-height: 100vh;
   margin: 0;
+
 }
 
 header {
@@ -20,9 +21,41 @@ header {
 img {
   width: 100%;
   display: block;
+  border-radius: 10px 10px 0 0;
 }
 
 main {
   max-width: 370px;
   width: 100%;
+  background-color: #283e50;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  padding: 15px;
+}
+
+p {
+  margin: 0 15px 30px 15px;
+  line-height: 1.5;
+}
+
+.pravidla,
+.start {
+  display: block;
+  padding: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pravidla {
+  background-color: #1fcca4;
+}
+
+.start {
+  margin-top: 1px;
+  background-color: #0197f6;
 }
