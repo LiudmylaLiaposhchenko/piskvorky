@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#615dad, #ffc8da);
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  max-width: 370px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+main {
+  max-width: 370px;
+  width: 100%;
+}
