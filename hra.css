@@ -14,11 +14,15 @@ body {
   color: #ffffff;
 }
 
-.home {
-  background-color: #1fcca4;
+.home,
+.restart {
   border-radius: 5px;
   padding: 8px;
   display: inline-block;
+}
+
+.home {
+  background-color: #1fcca4;
 }
 
 .home:hover,
@@ -28,9 +32,6 @@ body {
 
 .restart {
   background-color: #0197f6;
-  border-radius: 15px;
-  padding: 8px;
-  display: inline-block;
 }
 
 .restart:hover,
@@ -44,15 +45,9 @@ img {
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 76px;
+  font-size: 68px;
   margin: 0;
   text-shadow: 0 3px 10px #615dad;
-}
-
-p {
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0;
 }
 
 header {
@@ -63,14 +58,22 @@ header {
   font-family: sans-serif;
 }
 
+p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
-
 }
 
-button {
+main button {
   flex-basis: 10%;
   height: 8vmin;
   border: 1px solid black;
