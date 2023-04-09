@@ -91,6 +91,7 @@ main button {
   padding: 0;
   position: relative;
   cursor: pointer;
+  color: black;
 }
 
 main button:hover,

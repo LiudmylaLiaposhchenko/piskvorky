@@ -12,6 +12,8 @@ const handleClick = (event) => {
     document.querySelector('.player').classList.remove('board__field--cross');
     document.querySelector('.player').classList.add('board__field--circle');
   }
+
+  event.target.disabled = true;
 };
 document
   .querySelector('button:nth-child(1)')
