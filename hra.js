@@ -1,7 +1,13 @@
 let currentPlayer = 'circle';
 
 const handleClick = (event) => {
-  event.target.classList.add('board__field--circle');
+  if (currentPlayer === 'circle') {
+    event.target.classList.add('board__field--circle');
+    currentPlayer = 'cross';
+  } else {
+    event.target.classList.add('board__field--cross');
+    currentPlayer = 'circle';
+  }
 };
 document
   .querySelector('button:nth-child(1)')
