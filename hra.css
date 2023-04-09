@@ -85,6 +85,7 @@ main button {
   align-items: center;
   padding: 0;
   position: relative;
+  cursor: pointer;
 }
 
 main button:hover,
@@ -101,21 +102,20 @@ main button:focus {
   border-radius: 50%
 }
 
-.board__field--cross::after {
-  display: block;
-  content: "";
-  width: 70%;
-  height: 5px;
-  background-color: black;
-  transform: rotate(45deg);
-  position: absolute;
-}
-
+.board__field--cross::after,
 .board__field--cross::before {
   display: block;
   content: "";
   width: 70%;
   height: 5px;
   background-color: black;
+}
+
+.board__field--cross::after {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.board__field--cross::before {
   transform: rotate(-45deg);
 }
