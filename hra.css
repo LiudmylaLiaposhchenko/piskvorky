@@ -72,6 +72,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
+  width: 100%;
 }
 
 main button {
@@ -79,9 +80,42 @@ main button {
   height: 8vmin;
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
 }
 
-button:hover,
-button:focus {
+main button:hover,
+main button:focus {
   background: rgba(255, 255, 255, 0.6);
+}
+
+.board__field--circle::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  border: 5px solid black;
+  border-radius: 50%
+}
+
+.board__field--cross::after {
+  display: block;
+  content: "";
+  width: 70%;
+  height: 5px;
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.board__field--cross::before {
+  display: block;
+  content: "";
+  width: 70%;
+  height: 5px;
+  background-color: black;
+  transform: rotate(-45deg);
 }
