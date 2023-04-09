@@ -4,9 +4,13 @@ const handleClick = (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.add('board__field--circle');
     currentPlayer = 'cross';
+    document.querySelector('.player').classList.remove('board__field--circle');
+    document.querySelector('.player').classList.add('board__field--cross');
   } else {
     event.target.classList.add('board__field--cross');
     currentPlayer = 'circle';
+    document.querySelector('.player').classList.remove('board__field--cross');
+    document.querySelector('.player').classList.add('board__field--circle');
   }
 };
 document

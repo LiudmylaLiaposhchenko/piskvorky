@@ -64,8 +64,13 @@ p {
   background-color: #0090e9;
 }
 
-img {
-  width: 27px;
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
 }
 
 main {
@@ -98,7 +103,7 @@ main button:focus {
   display: block;
   width: 50%;
   height: 50%;
-  border: 5px solid black;
+  border: 5px solid currentColor;
   border-radius: 50%
 }
 
@@ -108,7 +113,7 @@ main button:focus {
   content: "";
   width: 70%;
   height: 5px;
-  background-color: black;
+  background-color: currentColor;
 }
 
 .board__field--cross::after {
