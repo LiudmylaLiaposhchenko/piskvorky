@@ -105,7 +105,21 @@ main button:focus {
   width: 50%;
   height: 50%;
   border: 5px solid currentColor;
-  border-radius: 50%
+  border-radius: 50%;
+  animation-duration: 0.2s;
+  animation-name: krouzek;
+}
+
+@keyframes krouzek {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 .board__field--cross::after,
@@ -115,6 +129,8 @@ main button:focus {
   width: 70%;
   height: 5px;
   background-color: currentColor;
+  animation-duration: 0.2s;
+  animation-name: krizek;
 }
 
 .board__field--cross::after {
@@ -124,4 +140,16 @@ main button:focus {
 
 .board__field--cross::before {
   transform: rotate(-45deg);
+}
+
+@keyframes krizek {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 70%;
+    height: 5px;
+  }
 }
