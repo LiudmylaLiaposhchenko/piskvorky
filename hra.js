@@ -45,3 +45,10 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', handleClick);
+
+document.querySelector('.restart').addEventListener('click', (event) => {
+  const odpovedUzivatele = confirm('Opravdu chceš začít znovu?');
+  if (!odpovedUzivatele) {
+    event.preventDefault();
+  }
+});
