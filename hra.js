@@ -133,9 +133,17 @@ buttons.forEach((button, index) => {
     }
     event.target.disabled = true;
     const vitez = findWinner(herniPole);
+
     if (vitez === 'o' || vitez === 'x') {
-      alert(`Vyhrál hráč se symbolem ${vitez}!`);
-      location.reload();
+      setTimeout(() => {
+        alert(`Vyhrál hráč se symbolem ${vitez}!`);
+        location.reload();
+      }, 300);
+    } else if (vitez === 'tie') {
+      setTimeout(() => {
+        alert(`Hra skončila nerozhodné.`);
+        location.reload();
+      }, 300);
     }
   };
 
