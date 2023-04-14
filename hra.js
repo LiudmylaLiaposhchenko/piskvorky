@@ -15,40 +15,15 @@ const handleClick = (event) => {
 
   event.target.disabled = true;
 };
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', handleClick);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', handleClick);
 
 document.querySelector('.restart').addEventListener('click', (event) => {
   const odpovedUzivatele = confirm('Opravdu chceš začít znovu?');
   if (!odpovedUzivatele) {
     event.preventDefault();
   }
+});
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', handleClick);
 });
