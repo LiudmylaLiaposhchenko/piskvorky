@@ -10,10 +10,9 @@ document.querySelector('.restart').addEventListener('click', (event) => {
   }
 });
 
-const buttonsAll = document.querySelectorAll('button');
-const herniPole = Array.from(buttonsAll).map((button) => '_');
-
 const buttons = document.querySelectorAll('button');
+const herniPole = Array.from(buttons).map((button) => '_');
+
 buttons.forEach((button, index) => {
   const handleClick = (event) => {
     if (currentPlayer === 'circle') {
@@ -44,6 +43,21 @@ buttons.forEach((button, index) => {
         alert(`Hra skončila nerozhodné.`);
         location.reload();
       }, 300);
+    } else if (currentPlayer === 'cross') {
+      fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          board: herniPole,
+          player: 'x',
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const { x, y } = data.position;
+          const index = x + y * 10;
+          buttons[index].click();
+        });
     }
   };
 
